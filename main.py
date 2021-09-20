@@ -20,7 +20,7 @@ class AliPay(object):
     """
 
     def __init__(self, app_private_key_path, alipay_public_key_path):
-        self.appid = '2016101100661300'
+        self.appid = ''
         self.gateway = "https://openapi.alipaydev.com/gateway.do"
         self.app_private_key_path = app_private_key_path
         self.app_private_key = None
@@ -37,7 +37,7 @@ class AliPay(object):
             "out_biz_no": out_trade_no,
             "trans_amount": total_amount,
             "product_code": "TRANS_ACCOUNT_NO_PWD",
-            'order_title': '沙箱环境转账测试',
+            'order_title': '转账标题',
             'biz_scene': 'DIRECT_TRANSFER',
             'payee_info': {
                 'identity': 'ifbwfj2078@sandbox.com',
